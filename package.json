@@ -1,0 +1,12 @@
+{
+    "name": "tfnsw-user-service",
+    "version": "0.0.1",
+    "description": "",
+    "author": "",
+    "private": true,
+    "license": "UNLICENSED",
+    "engines": {
+        "npm": ">=9.0.0",
+        "node": ">=20.0.0"
+    }
+}
