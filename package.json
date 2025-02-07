@@ -8,5 +8,8 @@
     "engines": {
         "npm": ">=9.0.0",
         "node": ">=20.0.0"
+    },
+    "scripts": {
+        "deploy": "serverless deploy --region us-west-1 --stage dev"
     }
 }
