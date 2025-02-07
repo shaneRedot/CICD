@@ -28,7 +28,7 @@ phases:
       - echo "Current PATH:"
       - echo $PATH
       - echo "Deploying the service..."
-      - serverless deploy --region us-west-1 --stage dev
+      - serverless deploy --region us-west-1 --stage qa
 
 artifacts:
   files:
