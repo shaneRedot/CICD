@@ -18,7 +18,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo "Deploying the service..."
-      - npx serverless deploy --region us-west-1 --stage dev
+      - serverless deploy
 
 artifacts:
   files:
