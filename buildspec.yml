@@ -14,8 +14,10 @@ phases:
 
   build:
     commands:
-      - echo "Building the project..."
-      - npm run build
+      - echo Build started on `date` 
+      - npm install
+      - echo deploying the service...
+      - serverless deploy --region us-west-1 --stage $APP_ENV
 
   post_build:
     commands:
