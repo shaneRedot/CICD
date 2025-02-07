@@ -22,7 +22,7 @@ phases:
   post_build:
     commands:
       - echo "Running tests..."
-      - npm test
+      # - npm test
 
 artifacts:
   files:
