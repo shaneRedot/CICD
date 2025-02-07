@@ -14,15 +14,12 @@ phases:
 
   build:
     commands:
-      - echo Build started on `date` 
+      - echo Build started on `date`
       - npm install
-      - echo deploying the service...
+      - echo "Logging into Serverless Framework..."
+      - npx serverless login
+      - echo "Deploying the service..."
       - npx serverless deploy --region us-west-1 --stage $APP_ENV
-
-  # post_build:
-  #   commands:
-  #     - echo "Running tests..."
-  #     # - npm test
 
 artifacts:
   files:
