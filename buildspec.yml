@@ -9,16 +9,24 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
+      - echo "Node.js version:"
+      - node --version
+      - echo "NPM version:"
+      - npm --version
       - echo "Installing dependencies..."
       - npm install
       - echo "Installing Serverless Framework v3..."
       - npm install serverless@3
+      - echo "Fixing permissions..."
+      - chmod -R +x node_modules/.bin
+      - echo "Checking Serverless version..."
+      - npx serverless --version
 
   build:
     commands:
       - echo Build started on `date`
       - echo "Deploying the service..."
-      - serverless deploy
+      - npx serverless deploy --region us-west-1 --stage dev
 
 artifacts:
   files:
