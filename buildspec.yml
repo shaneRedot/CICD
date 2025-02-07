@@ -17,16 +17,16 @@ phases:
       - npm install
       - echo "Installing Serverless Framework v3..."
       - npm install serverless@3
-      - echo "Fixing permissions..."
-      - chmod -R +x node_modules/.bin
+      - echo "Adding node_modules/.bin to PATH..."
+      - export PATH=$(npm bin):$PATH
       - echo "Checking Serverless version..."
-      - npx serverless --version
+      - serverless --version
 
   build:
     commands:
       - echo Build started on `date`
       - echo "Deploying the service..."
-      - npx serverless deploy --region us-west-1 --stage dev
+      - serverless deploy --region us-west-1 --stage dev
 
 artifacts:
   files:
