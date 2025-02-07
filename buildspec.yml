@@ -16,11 +16,11 @@ phases:
       - echo "Installing dependencies..."
       - npm install
       - echo "Installing Serverless Framework v3..."
-      - npm install serverless@3
+      - npm install -g serverless@3
       - echo "Adding node_modules/.bin to PATH..."
-      - export PATH=$(npm bin):$PATH
+      - export PATH=$(pwd)/node_modules/.bin:$PATH
       - echo "Checking Serverless version..."
-      - serverless --version
+      - npx serverless --version
 
   build:
     commands:
