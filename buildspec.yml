@@ -11,13 +11,12 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - npm install
+      - echo "Installing Serverless Framework v3..."
+      - npm install serverless@3
 
   build:
     commands:
       - echo Build started on `date`
-      - npm install
-      - echo "Logging into Serverless Framework..."
-      - npx serverless login
       - echo "Deploying the service..."
       - npx serverless deploy --region us-west-1 --stage $APP_ENV
 
