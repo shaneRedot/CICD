@@ -26,6 +26,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo "Current PATH:"
+      - echo "Building the project..."
+      - npm run build
       - echo $PATH
       - echo "Deploying the service..."
       - serverless deploy --region us-east-1 --stage dev
