@@ -10,6 +10,7 @@
         "node": ">=20.0.0"
     },
     "scripts": {
+        "build": "npm run build",
         "deploy": "serverless deploy --region us-west-1 --stage dev"
     }
 }
